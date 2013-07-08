@@ -1,6 +1,6 @@
 # grunt-remove
 
-> Remove directory and files
+> GruntJS plugin for remove directory and files
 
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
@@ -24,30 +24,25 @@ In your project's Gruntfile, add a section named `remove` to the data object pas
 
 ```js
 grunt.initConfig({
+  ...
   remove: {
     options: {
-      // Task-specific options go here.
+      loger: true
     },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
+    fileList: ['path_to_file_1.extension', 'path_to_file_2.extension'],
+    dirList: ['path_to_dir_1', 'path_to_dir2/']
   },
+  ...
 })
 ```
 
 ### Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+#### options.loger
+Type: `Boolean`
+Default value: `undefined`
 
-A string value that is used to do something with whatever.
-
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
-
-A string value that is used to do something else with whatever else.
+A boolean value that is used to trace work operations.
 
 ### Usage Examples
 
