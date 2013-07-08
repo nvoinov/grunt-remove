@@ -45,7 +45,7 @@ Default value: `undefined`
 A boolean value that is used to trace work operations
 
 ## Release History
-v0.1.0:
+**v0.1.0:**
 
 	date: 2013-07-08
     changes:
