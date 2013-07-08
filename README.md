@@ -45,8 +45,12 @@ Default value: `undefined`
 A boolean value that is used to trace work operations
 
 ## Release History
-_(Nothing yet)_
+v0.1.0:
+  date: 2013-07-08
+  changes:
+    - Initial release of 0.1.0.
 
 
 ** Copyright (c) 2013 nvoinov **
+
 ** Licensed under the MIT license. **
