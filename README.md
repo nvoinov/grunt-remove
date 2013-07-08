@@ -51,6 +51,6 @@ v0.1.0:
     - Initial release of 0.1.0.
 
 
-** Copyright (c) 2013 nvoinov **
+**Copyright (c) 2013 nvoinov**
 
-** Licensed under the MIT license. **
+**Licensed under the MIT license.**
