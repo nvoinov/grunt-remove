@@ -109,5 +109,4 @@ module.exports = function (grunt) {
         }
         _trace('Files has been deleted.');
     });
-
 };
