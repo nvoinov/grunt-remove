@@ -1,0 +1,42 @@
+{
+  "name": "grunt-remove",
+  "description": "Remove directory and files",
+  "version": "0.1.0",
+  "homepage": "https://github.com/nvoinov/grunt-remove",
+  "author": {
+    "name": "nvoinov",
+    "email": "nvoinov.dev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nvoinov/grunt-remove.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nvoinov/grunt-remove/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/nvoinov/grunt-remove/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt-contrib-clean": "~0.4.0",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt": "~0.4.1"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
