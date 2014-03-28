@@ -29,8 +29,10 @@ grunt.initConfig({
     options: {
       trace: true
     },
-    fileList: ['path_to_file_1.extension', 'path_to_file_2.extension'],
-    dirList: ['path_to_dir_1', 'path_to_dir2/']
+    main: {
+      fileList: ['path_to_file_1.extension', 'path_to_file_2.extension'],
+      dirList: ['path_to_dir_1', 'path_to_dir2/']
+    }
   },
   ...
 })
