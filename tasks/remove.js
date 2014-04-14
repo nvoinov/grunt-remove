@@ -9,6 +9,7 @@
 'use strict';
 
 var path = require('path'),
+    glob = require('glob'),
     fs = require('fs');
 
 module.exports = function (grunt) {
@@ -32,9 +33,24 @@ module.exports = function (grunt) {
 
         var delete_file = function (path) {
             try {
+                grunt.log.writeln('Delete file: ', path);
                 fs.unlinkSync(path);
             } catch (e) {
                 grunt.log.writeln('Unable to delete file: "' + path + '" Message : ' + e.toString());
+            }
+        };
+
+        var delete_files_using_pattern = function (pattern) {
+            try {
+                grunt.log.writeln('Deleting files using pattern: ' + pattern);
+                var files = glob.sync(pattern);
+
+                files.forEach(function (file) {
+                    grunt.log.writeln('Deleting file: ', file);
+                    fs.unlinkSync(file);
+                });
+            } catch (e) {
+                grunt.log.writeln('Unable to delete file using pattern: "' + pattern + '" Message : ' + e.toString());
             }
         };
 
@@ -47,11 +63,11 @@ module.exports = function (grunt) {
         };
 
         var isFile = function (path) {
-            return fs.statSync(path).isFile()
+            return fs.statSync(path).isFile();
         };
 
         var isDirectory = function (path) {
-            return fs.statSync(path).isDirectory()
+            return fs.statSync(path).isDirectory();
         };
 
         var delete_files_in_folder = function (dir) {
@@ -99,11 +115,12 @@ module.exports = function (grunt) {
 
         if (fileList && fileList.length > 0) {
             for (i = 0; i < fileList.length; i += 1) {
-                _trace('Delete file: ' + fileList[i]);
                 if (isExists(fileList[i])) {
                     if (isFile(fileList[i])) {
                         delete_file(fileList[i]);
                     }
+                } else if(/\*/g.test(fileList[i])) {
+                    delete_files_using_pattern(fileList[i]);
                 }
             }
         }
